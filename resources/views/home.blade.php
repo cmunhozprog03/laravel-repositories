@@ -16,7 +16,7 @@
 
                     {{ __('You are logged in!') }}
                     <br>
-                    <a href="{{ route('dashboard.index') }}" class="btn btn-dark">Dashboard</a>
+                    <a href="{{ route('dashboard.index') }}" class="btn btn-block btn-dark">DASHBOARD</a>
                 </div>
             </div>
         </div>
