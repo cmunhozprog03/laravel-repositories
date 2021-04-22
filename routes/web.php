@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\DasboardController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,3 +17,14 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+Route::prefix('admin')
+       ->namespace('Admin')
+       ->group(function(){
+
+        Route::get('dashboard', 'DasboardController@index')->name('dashboard.index');
+       });
